@@ -12,7 +12,8 @@ public record EstacionMapaDTO(
         Double longitud,
         Double media,
         Integer aniosUtilizados,
-        String periodo
+        String periodo,
+        String procedencia
 ) {}
 
 

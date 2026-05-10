@@ -28,6 +28,14 @@ public class EstacionService {
         return mapToEstacionMapaDTO(estaciones);
     }
 
+    /**
+     *  Estaciones por procedencia
+     */
+    public List<EstacionMapaDTO> getAllEstacionesByProcedencia(String procedencia) {
+        List<EstacionDetalleEntity> estaciones = repository.findAllByProcedencia(procedencia);
+        return mapToEstacionMapaDTO(estaciones);
+    }
+
 
 
     /**
@@ -57,7 +65,8 @@ public class EstacionService {
                                 estacion.getLongitud(),
                                 estacion.getMedia(),
                                 estacion.getAniosUtilizados(),
-                                estacion.getPeriodo()
+                                estacion.getPeriodo(),
+                                estacion.getProcedencia()
                         ))
                 .toList();
     }

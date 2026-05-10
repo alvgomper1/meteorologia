@@ -27,6 +27,14 @@ public class EstacionController {
     }
 
     /**
+     *  Todas las estaciones para el mapa (carga inicial)
+     */
+    @GetMapping("/estaciones/{procedencia}")
+    public List<EstacionMapaDTO> getMapaPorProcedencia(@PathVariable String procedencia) {
+        return service.getAllEstacionesByProcedencia(procedencia);
+    }
+
+    /**
      *  Datos completos de una estación (modal)
      */
     @GetMapping("/estacion/{id}")

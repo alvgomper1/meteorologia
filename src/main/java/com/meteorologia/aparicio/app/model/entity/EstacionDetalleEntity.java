@@ -38,6 +38,7 @@ public class EstacionDetalleEntity {
     private Double media;
     private Integer aniosUtilizados;
     private String periodo;
+    private String procedencia;
 
     @OneToMany(mappedBy = "estacion", fetch = FetchType.LAZY)
     private List<SerieEntity> series;
